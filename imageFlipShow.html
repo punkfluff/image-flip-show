@@ -28,11 +28,12 @@ function mOver(image) {
    var flipThru =  function(){ 
       image.src = imageCollection[i]; 
     if (i < imageCollection.length - 1) { 
-       i++;
-       }else{
-       i = 0;
-       }  
-    }
+        i++;
+       } else{
+        i = 0;
+      }  
+   }
+   
    setTimeout(flipThru,  800);
    setTimeout(flipThru, 1600);
    setTimeout(flipThru, 2400);

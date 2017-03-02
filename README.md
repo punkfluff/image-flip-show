@@ -1,5 +1,6 @@
 # image-flip-show
-JS script for a timed image flipping "animation" over a single image tag/div which is triggered on mouseover (html file) and stops on mouseout
+JS script for a timed image flipping "animation" over a single image tag/div which is triggered on mouseover (html file) and stops on mouseout.
+
 Similar end result to a gif.
 
 1. Insert the <img> tag into the body of your html document , or into a custom code block on your SquareSpace or WordPress site.

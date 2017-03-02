@@ -9,4 +9,4 @@ code block on your SquareSpace or WordPress site.
 
 
 For a working example click here
-https://jsfiddle.net/8spumega/
+https://jsfiddle.net/v2ydq2gm/

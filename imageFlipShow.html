@@ -22,29 +22,28 @@ var imageCollection = [
     "",//new image 3 URL etc. add as many image URLs as you like separated by commas
 ];
 
-function mOver(image) {   
-
-   var i = 0; 
-   var flipThru =  function(){ 
-      image.src = imageCollection[i]; 
-    if (i < imageCollection.length - 1) { 
+var i = 0;    
+function flipThru(image){
+    image.src = imageFlip[i]; 
+    if (i < imageFlip.length - 1) { 
+    
         i++;
-       } else{
-        i = 0;
-      }  
-   }
-   
-   setTimeout(flipThru,  800);
-   setTimeout(flipThru, 1600);
-   setTimeout(flipThru, 2400);
-   setTimeout(flipThru, 3200);
-   setTimeout(flipThru, 4000); //etc, continue as many times as you'd like image to change to next image. Set second argument to any number you like - represents time in ms.
-   clearTimeout(flipThru);
+        
+     }else{
+     
+       i = 0;
+     } 
+}
+  
+var flipThruID;
+function mOver(imageTarget){ 
+   flipThruID = setInterval(function(){flipThru(imageTarget);}, 800); //you can change this number to any millisecond value you like
 }
 
-function mOut(image) {
-image.src = ""//original static image URL*/
-   }
+function mOut(imageTarget){
+  clearInterval(flipThruID);
+  imageTarget.src = "" //your original static image URL here between the quotes   
+}
       
 </script>
 

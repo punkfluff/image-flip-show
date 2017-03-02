@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<img onmouseover= "mOver(this)" onmouseout="mOut(this)" src= ""
+style="width:100px;height:100px;padding:40px;">
+    
+<!-- src = ""  ->put url of the initial static image to be displayed between quotes>    
+<!-- you can adjust size of images to be displayed as desired withiin the style tag-->
+    
+<script>
+
+var imageFlip = [ 
+    "",//new image 1 URL - URL must go between quotes
+    "",//new image 2 URL
+    "",//new image 3 URL etc. add as many image URLs as you like separated by commas
+];
+
+function mOver(image) {   
+
+   var i = 0; 
+   var flipThru =  function(){ 
+      image.src = imageFlip[i]; 
+    if (i < imageFlip.length - 1) { 
+       i++;
+       }else{
+       i = 0;
+       }  
+    }
+   setTimeout(flipThru,  800);
+   setTimeout(flipThru, 1600);
+   setTimeout(flipThru, 2400);
+   setTimeout(flipThru, 3200);
+   setTimeout(flipThru, 4000); //etc, continue as many times as you'd like image to change to next image. Set second argument to any number you like - represents time in ms.
+
+}
+
+function mOut(image) {
+image.src = ""//original static image URL*/
+   }
+      
+</script>
+
+</body>
+</html> 

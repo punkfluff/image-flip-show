@@ -23,9 +23,9 @@ var imageCollection = [
 ];
 
 var i = 0;    
-function flipThru(image){
-    image.src = imageFlip[i]; 
-    if (i < imageFlip.length - 1) { 
+function imageFlip(image){
+    image.src = imageCollection[i]; 
+    if (i < imageCollection.length - 1) { 
         i++;
     }else{
         i = 0;
@@ -35,7 +35,7 @@ function flipThru(image){
 var intervalReturnID;
     
 function mOver(imageTarget){ 
-   intervalReturnID = setInterval(function(){flipThru(imageTarget);}, 800); //you can change this number to any millisecond value you like
+   intervalReturnID = setInterval(function(){imageFlip(imageTarget);}, 800); //you can change this number to any millisecond value you like
 }
 
 function mOut(imageTarget){

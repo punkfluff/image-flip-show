@@ -35,13 +35,14 @@ function flipThru(image){
      } 
 }
   
-var flipThruID;
+var intervalReturnID;
+    
 function mOver(imageTarget){ 
-   flipThruID = setInterval(function(){flipThru(imageTarget);}, 800); //you can change this number to any millisecond value you like
+   intervalReturnID = setInterval(function(){flipThru(imageTarget);}, 800); //you can change this number to any millisecond value you like
 }
 
 function mOut(imageTarget){
-  clearInterval(flipThruID);
+  clearInterval(intervalReturnID);
   imageTarget.src = "" //your original static image URL here between the quotes   
 }
       
